@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ВЕСТРОЙ</title>
+    <script defer src="main.js"></script></head>
+    <body>
+<div class="overlay"></div>
+        <header class="header">
+    <div class="container header__container">
+        <div class="header__inner">
+            <div class="header__top">
+                <div class="header__top-inner">
+                    <div class="header__logo">
+                        <a href="">
+                            <img src="assets/images/logo.png" alt="" />
+                        </a>
+                    </div>
+                    <div class="header__nav-box">
+                        <ul class="header__nav">
+                            <li class="header__nav-item">
+                                <a href="#jobs" class="header__nav-btn nav-link">Виды работ</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#certificate" class="header__nav-btn nav-link">Сертификаты</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#objects" class="header__nav-btn nav-link">Выполненные объекты</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#about" class="header__nav-btn nav-link">О компании</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#footer" class="header__nav-btn nav-link">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__contacts-box">
+                        <div class="header__tel">
+                            <a href="tel:+78002010435">8 (800) 201-04-35 </a>
+                        </div>
+                        <div class="header__mail">
+                            <a href="mailto:vent35@yandex.ru">vent35@yandex.ru</a>
+                        </div>
+                    </div>
+                    <button class="burger">
+                        <span class="burger__line"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="header__bottom-inner">
+                    <div class="header__title-box">
+                        <h2 class="header__title">
+                            Проектирование, монтаж и установка<br />
+                            систем вентиляции
+                        </h2>
+                    </div>
+                    <div class="header__bottom-content">
+                        <div class="header__bottom-text">
+                            <p>Отправьте нам свой готовый проект и мы снизим его стоимость за счет инженерных решений</p>
+                        </div>
+                        <div class="header__bottom-btn-box">
+                            <button data-popup="#popup__success" class="header__btn button-yellow">Консультация</button>
+                            <button data-popup="#popup__calculator" class="header__btn button-white">Калькулятор</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <main class="main">
+            <!---------------------CALCULATOR--------------------->
+
+<div id="popup__calculator" aria-hidden="true" class="popup">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <div class="popup__body popup__body--calculator">
+                <button data-close type="button" class="popup__body-close-btn close-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M18 2L2 18" stroke="#888888" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                        <path d="M2 2L18 18" stroke="#888888" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+                <form data-popup-message="#popup__success" data-dev action="#" class="popup__calculator-form-box">
+                    <p class="popup__title popup__title--center">Калькулятор стоимости общеобменной вентиляции</p>
+                    <div class="popup__calculator-box">
+                        <div class="popup__calculator-input-box">
+                            <div class="popup__calculator-input">
+                                <div class="form__dropdown form__dropdown_search">
+                                    <div class="form__dropdown_top">
+                                        <label class="popup__calculator-label input-group">
+                                            <span class="popup__calculator-label-text subscription">Тип вентиляции </span>
+                                            <span class="popup__calculator-form-input-wrapper">
+                                                <input
+                                                    class="popup__calculator-form-input input-dropdown"
+                                                    type="text"
+                                                    placeholder="Выберите тип"
+                                                    data-validate
+                                                    data-required
+                                                    autocomplete="off"
+                                                    name="form[]"
+                                                />
+                                                <div class="form__input-svg-box">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" fill="none">
+                                                        <path
+                                                            d="M6 9.5L12 15.5L18 9.5"
+                                                            stroke="#0E1C15"
+                                                            stroke-width="1.5"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                        />
+                                                    </svg>
+                                                </div>
+                                            </span>
+                                            <span class="error-span subscription">Введите числовое значение</span>
+                                        </label>
+                                    </div>
+                                    <div class="form__dropdown_bottom">
+                                        <div class="form__dropdown_list">
+                                            <label class="form__dropdown_item">
+                                                <div class="form__dropdown_item_checkbox radio-wrapper">
+                                                    <input type="radio" name="locality" />
+                                                </div>
+                                                <div class="form__dropdown_item_name text">Вытяжная</div>
+                                            </label>
+                                            <label class="form__dropdown_item">
+                                                <div class="form__dropdown_item_checkbox radio-wrapper">
+                                                    <input type="radio" name="locality" />
+                                                </div>
+                                                <div class="form__dropdown_item_name text">Приточная без подогрева</div>
+                                            </label>
+                                            <label class="form__dropdown_item">
+                                                <div class="form__dropdown_item_checkbox radio-wrapper">
+                                                    <input type="radio" name="locality" />
+                                                </div>
+                                                <div class="form__dropdown_item_name text">Приточно-вытяжная с подогревом</div>
+                                            </label>
+                                            <label class="form__dropdown_item">
+                                                <div class="form__dropdown_item_checkbox radio-wrapper">
+                                                    <input type="radio" name="locality" />
+                                                </div>
+                                                <div class="form__dropdown_item_name text">Приточно-вытяжная с рекуперацией</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__dropdown form__dropdown_search">
+                                    <div class="form__dropdown_top">
+                                        <label class="popup__calculator-label input-group">
+                                            <span class="popup__calculator-label-text subscription">Этаж помещения</span>
+                                            <span class="popup__calculator-form-input-wrapper">
+                                                <input
+                                                    class="popup__calculator-form-input input--num"
+                                                    type="text"
+                                                    placeholder="Выберите этаж"
+                                                    data-validate
+                                                    data-required
+                                                    autocomplete="off"
+                                                    name="form[]"
+                                                />
+                                            </span>
+                                            <span class="error-span subscription">Введите числовое значение</span>
+                                        </label>
+                                    </div>
+                                    <div class="form__dropdown_bottom">
+                                        <div class="form__dropdown_list">
+                                            <label class="form__dropdown_item">
+                                                <div class="form__dropdown_item_checkbox radio-wrapper">
+                                                    <input type="radio" name="floor" />
+                                                </div>
+                                                <div class="form__dropdown_item_name text">Цокольный</div>
+                                            </label>
+                                            <label class="form__dropdown_item">
+                                                <div class="form__dropdown_item_checkbox radio-wrapper">
+                                                    <input type="radio" name="floor" />
+                                                </div>
+                                                <div class="form__dropdown_item_name text">1</div>
+                                            </label>
+                                            <label class="form__dropdown_item">
+                                                <div class="form__dropdown_item_checkbox radio-wrapper">
+                                                    <input type="radio" name="floor" />
+                                                </div>
+                                                <div class="form__dropdown_item_name text">2</div>
+                                            </label>
+                                            <label class="form__dropdown_item">
+                                                <div class="form__dropdown_item_checkbox radio-wrapper">
+                                                    <input type="radio" name="floor" />
+                                                </div>
+                                                <div class="form__dropdown_item_name text">3</div>
+                                            </label>
+                                            <label class="form__dropdown_item">
+                                                <div class="form__dropdown_item_checkbox radio-wrapper">
+                                                    <input type="radio" name="floor" />
+                                                </div>
+                                                <div class="form__dropdown_item_name text">4</div>
+                                            </label>
+                                            <label class="form__dropdown_item">
+                                                <div class="form__dropdown_item_checkbox radio-wrapper">
+                                                    <input type="radio" name="floor" />
+                                                </div>
+                                                <div class="form__dropdown_item_name text">4 и выше</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label class="popup__calculator-label input-group">
+                                    <span class="popup__calculator-label-text subscription">Площадь помещения, м2 </span>
+                                    <span class="popup__calculator-form-input-wrapper">
+                                        <input
+                                            class="popup__calculator-form-input input--num"
+                                            type="text"
+                                            placeholder="Укажите площадь от 10 до 1000 м2"
+                                            data-validate
+                                            data-required
+                                            autocomplete="off"
+                                            name="form[]"
+                                        />
+                                    </span>
+                                    <span class="error-span subscription">Введите числовое значение</span>
+                                </label>
+                                <label class="popup__calculator-label input-group">
+                                    <span class="popup__calculator-label-text subscription">Высота помещения, м</span>
+                                    <span class="popup__calculator-form-input-wrapper">
+                                        <input
+                                            class="popup__calculator-form-input input--num"
+                                            type="text"
+                                            placeholder="Укажите высоту от 2 до 4 м"
+                                            data-validate
+                                            data-required
+                                            autocomplete="off"
+                                            name="form[]"
+                                        />
+                                    </span>
+                                    <span class="error-span subscription">Введите числовое значение</span>
+                                </label>
+                            </div>
+                            <div class="popup__calculator-btn-wrapper">
+                                <div class="popup__calculator-btn-box">
+                                    <button class="popup__calculator-btn button-yellow">Посчитать</button>
+                                    <button class="popup__calculator-btn button-white">Консультация</button>
+                                </div>
+                                <p class="popup__calculator-btn-text">Итоговая стоимость:</p>
+                            </div>
+
+                            <p class="popup__calculator-btn-disclamer">
+                                *Если площадь помещения и высота больше, обратитесь за индивидуальной консультацией к специалисту
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------------------SUCCESS----------------------->
+
+<div id="popup__success" aria-hidden="true" class="popup">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <div class="popup__body">
+                <button data-close type="button" class="popup__body-close-btn close-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M18 2L2 18" stroke="#888888" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                        <path d="M2 2L18 18" stroke="#888888" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <form data-popup-message="#popup__success" data-dev action="#" class="popup__calculator-form-box">
+                    <p class="popup__title popup__title--center">Получить<br />консультацию</p>
+                    <p class="popup__text">Оставьте заявку, чтобы наш инженер мог с Вами<br />связаться</p>
+
+                    <div class="footer__content-input" action="">
+                        <div class="popup__input-name input-group">
+                            <div class="popup__application-form-input-wrapper">
+                                <input class="popup__input input--name" type="text" placeholder="Имя" data-validate data-required autocomplete="off" name="form[]" />
+                            </div>
+                            <span class="error-span">Введите текстовое значение</span>
+                        </div>
+                        <div class="popup__input-tel input-group">
+                            <div class="popup__application-form-input-wrapper">
+                                <input
+                                    class="popup__input input--tel phone-mask"
+                                    type="text"
+                                    placeholder="Телефон"
+                                    data-validate
+                                    data-required="tel"
+                                    autocomplete="off"
+                                    name="form[]"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <button class="popup__btn button-yellow" type="submit">Отплавить</button>
+                </form>
+                <p class="popup__convention">
+                    Нажимая на кнопку, Вы даете согласие на обработку<br />
+                    персональных данных
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+            
+        <div class="delimiter"></div>
+
+
+            <section class="advantages">
+    <div class="container">
+        <div class="advantages__inner">
+            <div class="advantages__title-box">
+                <h2 class="advantages__title title"><span class="yellow-text">ПРЕИМУЩЕСТВА РАБОТЫ</span><br> С НАМИ</h2>
+            </div>
+            <div class="advantages__tile-box">
+                <ul class="advantages__tile">
+                    <li class="advantages__tile-item">
+                        <p class="advantages__item-number">0<span class="yellow-text">1</span></p>
+                        <p class="advantages__item-text">Инженерно-проектный отдел с опытом работы 20 лет</p>
+                    </li>
+                    <li class="advantages__tile-item">
+                        <div class="advantages__item-number">
+                            <p class="">0<span class="yellow-text">2</span></p>
+                        </div>
+                        <div class="advantages__item-text">
+                            <p class="">Оптимизация проектов: сокращение затрат на эксплуатацию и закупку</p>
+                        </div>
+                    </li>
+                    <li class="advantages__tile-item">
+                        <div class="advantages__item-number">
+                            <p class="">0<span class="yellow-text">3</span></p>
+                        </div>
+                        <div class="advantages__item-text">
+                            <p class="">Работники со всеми допусками по высоте, сварке и по пожарной безопастности</p>
+                        </div>
+                    </li>
+                    <li class="advantages__tile-item">
+                        <div class="advantages__item-number">
+                            <p class="">0<span class="yellow-text">4</span></p>
+                        </div>
+                        <div class="advantages__item-text">
+                            <p class="">Гарантия на оборудование 3 года, на работы до 10 лет</p>
+                        </div>
+                    </li>
+                    <li class="advantages__tile-item">
+                        <div class="advantages__item-number">
+                            <p class="">0<span class="yellow-text">5</span></p>
+                        </div>
+                        <div class="advantages__item-text">
+                            <p class="">СРО, лицензия МЧС, сварочная и электролаборатория</p>
+                        </div>
+                    </li>
+                    <li class="advantages__tile-item">
+                        <div class="advantages__item-number">
+                            <p class="">0<span class="yellow-text">6</span></p>
+                        </div>
+                        <div class="advantages__item-text">
+                            <p class="">Собственная спецтехника, алмазное бурение, собсвтенные бытовки</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+            
+        <div class="delimiter"></div>
+
+
+            <section class="jobs" id="jobs">
+    <div class="container jobs__container">
+        <div class="jobs__inner">
+            <div class="jobs__title-box">
+                <h2 class="jobs__title title">ВИДЫ РАБОТ</h2>
+            </div>
+            <div class="jobs__content">
+                <div class="jobs__tab-box">
+                    <ul class="jobs__list">
+                        <li class="jobs__list-item active">
+                            <button class="jobs__item-title">Вентиляция</button>
+                        </li>
+                        <li class="jobs__list-item">
+                            <button class="jobs__item-title">Кондиционирование</button>
+                        </li>
+                        <li class="jobs__list-item">
+                            <button class="jobs__item-title">Акты ВДПО</button>
+                        </li>
+                        <li class="jobs__list-item">
+                            <button class="jobs__item-title">Аспирация и <br>Пневмотранспорт</button>
+                        </li>
+                        <li class="jobs__list-item">
+                            <button class="jobs__item-title">Дымоудаление</button>
+                        </li>
+                        <li class="jobs__list-item">
+                            <button class="jobs__item-title">Огнезащита зданий и <br>сооружений</button>
+                        </li>
+                    </ul>
+
+                    <ul class="jobs__tab">
+                        <li class="jobs__tab-item active">
+                            <div class="jobs__tab-text">
+                                <p class="">
+                                    Компания «Вентиляциястрой» готова предложить монтаж промышленных и бытовых систем вентиляции любой сложности, с соблюдением всех
+                                    правил ведения работ на объекте и в строгом соответствии с графиком производства работ. Авторский<br> технический надзор и ежедневный
+                                    отчет о работах.
+                                </p>
+
+                                <p class="">
+                                    Для того чтобы произвести точный расчет системы вентиляции обратитесь к менеджерам компании «Вестрой». При заказе работ у нас
+                                    проектирование вы <br>получите бесплатно.
+                                </p>
+                            </div>
+                            <div class="jobs__tab-btn-box">
+                                <button class="jobs__btn button-white">Калькулятор</button>
+                                <button class="jobs__btn button-yellow">Консультация</button>
+                            </div>
+                        </li>
+                        <li class="jobs__tab-item">
+                            <div class="jobs__tab-text">
+                                <p class="">
+                                    2Компания «Вентиляциястрой» готова предложить монтаж промышленных и бытовых систем вентиляции любой сложности, с соблюдением всех
+                                    правил ведения работ на объекте и в строгом соответствии с графиком производства работ. Авторский<br> технический надзор и ежедневный
+                                    отчет о работах.
+                                </p>
+
+                                <p class="">
+                                    Для того чтобы произвести точный расчет системы вентиляции обратитесь к менеджерам компании «Вестрой». При заказе работ у нас
+                                    проектирование вы <br>получите бесплатно.
+                                </p>
+                            </div>
+                            <div class="jobs__tab-btn-box">
+                                <button class="jobs__btn button-white">Калькулятор</button>
+                                <button class="jobs__btn button-yellow">Консультация</button>
+                            </div>
+                        </li>
+                        <li class="jobs__tab-item">
+                            <div class="jobs__tab-text">
+                                <p class="">
+                                    3Компания «Вентиляциястрой» готова предложить монтаж промышленных и бытовых систем вентиляции любой сложности, с соблюдением всех
+                                    правил ведения работ на объекте и в строгом соответствии с графиком производства работ. Авторский<br> технический надзор и ежедневный
+                                    отчет о работах.
+                                </p>
+
+                                <p class="">
+                                    Для того чтобы произвести точный расчет системы вентиляции обратитесь к менеджерам компании «Вестрой». При заказе работ у нас
+                                    проектирование вы <br>получите бесплатно.
+                                </p>
+                            </div>
+                            <div class="jobs__tab-btn-box">
+                                <button class="jobs__btn button-white">Калькулятор</button>
+                                <button class="jobs__btn button-yellow">Консультация</button>
+                            </div>
+                        </li>
+                        <li class="jobs__tab-item">
+                            <div class="jobs__tab-text">
+                                <p class="">
+                                    4Компания «Вентиляциястрой» готова предложить монтаж промышленных и бытовых систем вентиляции любой сложности, с соблюдением всех
+                                    правил ведения работ на объекте и в строгом соответствии с графиком производства работ. Авторский<br> технический надзор и ежедневный
+                                    отчет о работах.
+                                </p>
+
+                                <p class="">
+                                    Для того чтобы произвести точный расчет системы вентиляции обратитесь к менеджерам компании «Вестрой». При заказе работ у нас
+                                    проектирование вы <br>получите бесплатно.
+                                </p>
+                            </div>
+                            <div class="jobs__tab-btn-box">
+                                <button class="jobs__btn button-white">Калькулятор</button>
+                                <button class="jobs__btn button-yellow">Консультация</button>
+                            </div>
+                        </li>
+                        <li class="jobs__tab-item">
+                            <div class="jobs__tab-text">
+                                <p class="">
+                                    5Компания «Вентиляциястрой» готова предложить монтаж промышленных и бытовых систем вентиляции любой сложности, с соблюдением всех
+                                    правил ведения работ на объекте и в строгом соответствии с графиком производства работ. Авторский<br> технический надзор и ежедневный
+                                    отчет о работах.
+                                </p>
+
+                                <p class="">
+                                    Для того чтобы произвести точный расчет системы вентиляции обратитесь к менеджерам компании «Вестрой». При заказе работ у нас
+                                    проектирование вы <br>получите бесплатно.
+                                </p>
+                            </div>
+                            <div class="jobs__tab-btn-box">
+                                <button class="jobs__btn button-white">Калькулятор</button>
+                                <button class="jobs__btn button-yellow">Консультация</button>
+                            </div>
+                        </li>
+                        <li class="jobs__tab-item">
+                            <div class="jobs__tab-text">
+                                <p class="">
+                                    6Компания «Вентиляциястрой» готова предложить монтаж промышленных и бытовых систем вентиляции любой сложности, с соблюдением всех
+                                    правил ведения работ на объекте и в строгом соответствии с графиком производства работ. Авторский<br> технический надзор и ежедневный
+                                    отчет о работах.
+                                </p>
+
+                                <p class="">
+                                    Для того чтобы произвести точный расчет системы вентиляции обратитесь к менеджерам компании «Вестрой». При заказе работ у нас
+                                    проектирование вы <br>получите бесплатно.
+                                </p>
+                            </div>
+                            <div class="jobs__tab-btn-box">
+                                <button class="jobs__btn button-white">Калькулятор</button>
+                                <button class="jobs__btn button-yellow">Консультация</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            
+        <div class="delimiter"></div>
+
+
+            <section class="certificate" id="certificate">
+    <div class="container">
+        <div class="certificate__inner">
+            <div class="certificate__title-box">
+                <h2 class="certificate__title title"><span class="yellow-text">ЛИЦЕНЗИИ</span> И СЕРТИФИКАТЫ</h2>
+            </div>
+
+            <div class="certificate__swiper-box">
+                <div class="certificate__swiper swiper">
+                    <div class="certificate__swiper-wrapper swiper-wrapper">
+                        <div class="certificate__swiper-slide swiper-slide">
+                            <div class="certificate__swiper-slide-imgbox">
+                                <img class="certificate__swiper-slide-img" src="assets/images/certificate1.jpg" alt="" />
+                            </div>
+                        </div>
+                        <div class="certificate__swiper-slide swiper-slide">
+                            <div class="certificate__swiper-slide-imgbox">
+                                <img class="certificate__swiper-slide-img" src="assets/images/certificate2.jpg" alt="" />
+                            </div>
+                        </div>
+                        <div class="certificate__swiper-slide swiper-slide">
+                            <div class="certificate__swiper-slide-imgbox">
+                                <img class="certificate__swiper-slide-img" src="assets/images/certificate3.jpg" alt="" />
+                            </div>
+                        </div>
+                        <div class="certificate__swiper-slide swiper-slide">
+                            <div class="certificate__swiper-slide-imgbox">
+                                <img class="certificate__swiper-slide-img" src="assets/images/certificate2.jpg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="certificate__swiper-btn-prev swiper-button-prev">
+                    <div class="certificate__swiper-svg-box">
+                        <svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.4911 21.723L3.41168 11.7456L14.4911 1.76813C14.6894 1.58987 14.8005 1.35056 14.8005 1.10137C14.8005 0.852182 14.6894 0.612877 14.4911 0.434613C14.3947 0.348298 14.2797 0.279726 14.1528 0.232913C14.0259 0.1861 13.8896 0.161987 13.752 0.161987C13.6143 0.161987 13.4781 0.1861 13.3511 0.232913C13.2242 0.279726 13.1092 0.348298 13.0129 0.434613L1.22401 11.0489C1.01703 11.2353 0.901196 11.4853 0.901196 11.7456C0.901196 12.0059 1.01703 12.2559 1.22401 12.4423L13.0106 23.0566C13.107 23.1435 13.2223 23.2126 13.3496 23.2597C13.477 23.3069 13.6138 23.3312 13.752 23.3312C13.8902 23.3312 14.027 23.3069 14.1543 23.2597C14.2817 23.2126 14.3969 23.1435 14.4933 23.0566C14.6917 22.8783 14.8027 22.639 14.8027 22.3898C14.8027 22.1406 14.6917 21.9013 14.4933 21.723H14.4911Z"
+                                fill="white"
+                            />
+                        </svg>
+                    </div>
+                </div>
+                <div class="certificate__swiper-btn-next swiper-button-next">
+                    <div class="certificate__swiper-svg-box">
+                        <svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.508937 1.77013L11.5883 11.7476L0.508937 21.725C0.310585 21.9033 0.19954 22.1426 0.19954 22.3918C0.19954 22.641 0.310585 22.8803 0.508937 23.0586C0.605277 23.1449 0.720268 23.2134 0.847176 23.2603C0.974085 23.3071 1.11036 23.3312 1.24802 23.3312C1.38567 23.3312 1.52195 23.3071 1.64886 23.2603C1.77576 23.2134 1.89076 23.1449 1.9871 23.0586L13.776 12.4443C13.983 12.2579 14.0988 12.0079 14.0988 11.7476C14.0988 11.4873 13.983 11.2373 13.776 11.0509L1.98937 0.436613C1.89296 0.349688 1.77768 0.280598 1.65036 0.233423C1.52303 0.186247 1.38622 0.161943 1.24802 0.161943C1.10981 0.161943 0.973006 0.186247 0.845677 0.233423C0.718347 0.280598 0.603074 0.349688 0.506662 0.436613C0.30831 0.614876 0.197266 0.854183 0.197266 1.10337C0.197266 1.35256 0.30831 1.59187 0.506662 1.77013H0.508937Z"
+                                fill="white"
+                            />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            
+        <div class="delimiter"></div>
+
+
+            <section class="objects" id="objects">
+    <div class="container">
+        <div class="objects__inner">
+            <div class="objects__title-box">
+                <h2 class="objects__title title">ВЫПОЛНЕННЫЕ<span class="yellow-text"> ОБЪЕКТЫ</span></h2>
+            </div>
+
+            <div class="objects__swiper-box">
+                <div class="objects__swiper swiper">
+                    <div class="objects__swiper-wrapper swiper-wrapper">
+                        <div class="objects__swiper-slide swiper-slide">
+                            <div class="objects__swiper-slide-left">
+                                <div class="objects__swiper-title-box">
+                                    <h3 class="objects__swiper-title">ГК “Вестрой” реализовала более 974 объектов по всей России</h3>
+                                </div>
+                                <div class="objects__swiper-content-box">
+                                    <p class="objects__swiper-content">Воронежское акционерное самолетстроительное общество</p>
+                                </div>
+                            </div>
+                            <div class="objects__swiper-slide-right">
+                                <div class="objects__swiper-slide-video-box">
+                                    <img src="assets/images/objects-video.png" alt="" />
+                                    <button class="objects__swiper-slide-video-play">
+                                        <svg viewBox="0 0 207 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.656738 97.7281V19.7965C0.656738 14.6293 3.36984 9.67376 8.1992 6.02001C13.0286 2.36626 19.5786 0.313599 26.4083 0.313599H180.918C187.748 0.313599 194.298 2.36626 199.127 6.02001C203.956 9.67376 206.669 14.6293 206.669 19.7965V97.7281C206.669 102.895 203.956 107.851 199.127 111.505C194.298 115.158 187.748 117.211 180.918 117.211H26.4083C19.5786 117.211 13.0286 115.158 8.1992 111.505C3.36984 107.851 0.656738 102.895 0.656738 97.7281ZM88.0834 30.4439C87.1207 29.9254 85.988 29.6173 84.8093 29.5534C83.6306 29.4895 82.4514 29.6723 81.4009 30.0818C80.3504 30.4913 79.4692 31.1116 78.8537 31.8748C78.2382 32.638 77.9122 33.5146 77.9115 34.4087V83.116C77.9122 84.01 78.2382 84.8867 78.8537 85.6499C79.4692 86.4131 80.3504 87.0334 81.4009 87.4428C82.4514 87.8523 83.6306 88.0351 84.8093 87.9712C85.988 87.9074 87.1207 87.5993 88.0834 87.0807L133.149 62.7271C133.983 62.2765 134.663 61.6817 135.133 60.9921C135.602 60.3024 135.847 59.538 135.847 58.7623C135.847 57.9866 135.602 57.2222 135.133 56.5326C134.663 55.8429 133.983 55.2481 133.149 54.7975L88.0834 30.4439Z" fill="black" fill-opacity="0.7"/>
+                                            </svg> 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="objects__swiper-slide swiper-slide">
+                            <div class="objects__swiper-slide-left">
+                                <div class="objects__swiper-title-box">
+                                    <h3 class="objects__swiper-title">ГК “Вестрой” реализовала более 974 объектов по всей России</h3>
+                                </div>
+                                <div class="objects__swiper-content-box">
+                                    <p class="objects__swiper-content">Воронежское акционерное самолетстроительное общество</p>
+                                </div>
+                            </div>
+                            <div class="objects__swiper-slide-right">
+                                <div class="objects__swiper-slide-video-box">
+                                    <img src="assets/images/objects-video.png" alt="" />
+                                    <button class="objects__swiper-slide-video-play">
+                                        <svg viewBox="0 0 207 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.656738 97.7281V19.7965C0.656738 14.6293 3.36984 9.67376 8.1992 6.02001C13.0286 2.36626 19.5786 0.313599 26.4083 0.313599H180.918C187.748 0.313599 194.298 2.36626 199.127 6.02001C203.956 9.67376 206.669 14.6293 206.669 19.7965V97.7281C206.669 102.895 203.956 107.851 199.127 111.505C194.298 115.158 187.748 117.211 180.918 117.211H26.4083C19.5786 117.211 13.0286 115.158 8.1992 111.505C3.36984 107.851 0.656738 102.895 0.656738 97.7281ZM88.0834 30.4439C87.1207 29.9254 85.988 29.6173 84.8093 29.5534C83.6306 29.4895 82.4514 29.6723 81.4009 30.0818C80.3504 30.4913 79.4692 31.1116 78.8537 31.8748C78.2382 32.638 77.9122 33.5146 77.9115 34.4087V83.116C77.9122 84.01 78.2382 84.8867 78.8537 85.6499C79.4692 86.4131 80.3504 87.0334 81.4009 87.4428C82.4514 87.8523 83.6306 88.0351 84.8093 87.9712C85.988 87.9074 87.1207 87.5993 88.0834 87.0807L133.149 62.7271C133.983 62.2765 134.663 61.6817 135.133 60.9921C135.602 60.3024 135.847 59.538 135.847 58.7623C135.847 57.9866 135.602 57.2222 135.133 56.5326C134.663 55.8429 133.983 55.2481 133.149 54.7975L88.0834 30.4439Z" fill="black" fill-opacity="0.7"/>
+                                            </svg> 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            
+            </div>
+            <div class="objects__swiper-btn-box">
+                <div class="objects__swiper-btn-prev swiper-button-prev">
+                    <div class="objects__swiper-svg-box">
+                        <svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.5096 22.052L3.25718 11.9187L14.5096 1.78541C14.7111 1.60436 14.8239 1.36132 14.8239 1.10823C14.8239 0.855151 14.7111 0.612108 14.5096 0.431059C14.4118 0.343396 14.295 0.273752 14.1661 0.226208C14.0372 0.178664 13.8988 0.154175 13.759 0.154175C13.6192 0.154175 13.4808 0.178664 13.3519 0.226208C13.223 0.273752 13.1062 0.343396 13.0084 0.431059L1.03533 11.2111C0.825126 11.4004 0.707479 11.6543 0.707479 11.9187C0.707479 12.1831 0.825126 12.437 1.03533 12.6263L13.0061 23.4064C13.104 23.4947 13.2211 23.5648 13.3504 23.6127C13.4797 23.6606 13.6186 23.6853 13.759 23.6853C13.8994 23.6853 14.0383 23.6606 14.1676 23.6127C14.297 23.5648 14.414 23.4947 14.5119 23.4064C14.7134 23.2253 14.8262 22.9823 14.8262 22.7292C14.8262 22.4761 14.7134 22.2331 14.5119 22.052H14.5096Z"
+                                fill="white"
+                            />
+                        </svg>
+                    </div>
+                </div>
+                <div class="objects__swiper-btn-next swiper-button-next">
+                    <div class="objects__swiper-svg-box">
+                        <svg width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.21693 1.78746L12.4694 11.9208L1.21693 22.0541C1.01548 22.2351 0.9027 22.4782 0.9027 22.7312C0.9027 22.9843 1.01548 23.2274 1.21693 23.4084C1.31478 23.4961 1.43156 23.5657 1.56045 23.6133C1.68934 23.6608 1.82775 23.6853 1.96756 23.6853C2.10736 23.6853 2.24576 23.6608 2.37466 23.6133C2.50355 23.5657 2.62033 23.4961 2.71818 23.4084L14.6912 12.6284C14.9014 12.439 15.0191 12.1851 15.0191 11.9208C15.0191 11.6564 14.9014 11.4025 14.6912 11.2132L2.72049 0.433107C2.62257 0.344824 2.5055 0.274654 2.37618 0.226744C2.24686 0.178831 2.10792 0.154148 1.96756 0.154148C1.82719 0.154148 1.68825 0.178831 1.55893 0.226744C1.42961 0.274654 1.31254 0.344824 1.21462 0.433107C1.01317 0.614155 0.900391 0.857201 0.900391 1.11028C0.900391 1.36337 1.01317 1.60641 1.21462 1.78746H1.21693Z"
+                                fill="white"
+                            />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <button class="objects__btn button-yellow">Консультация</button>
+        </div>
+    </div>
+</section>
+
+            
+        <div class="delimiter"></div>
+
+
+            <section class="about" id='about'>
+    <div class="container">
+        <div class="about__inner">
+            <div class="about__title-box">
+                <h2 class="about__title title">О КОМПАНИИ</h2>
+                <p class="about__title-text">Над Вашим проектом работает <span class="yellow-text">сплоченная команда специалистов</span></p>
+            </div>
+
+            <div class="about__swiper-box">
+                <div class="about__swiper swiper">
+                    <div class="about__swiper-wrapper swiper-wrapper">
+                        <div class="about__swiper-slide swiper-slide">
+                            <div class="about__swiper-slide-imgbox">
+                                <img class="about__swiper-slide-img" src="assets/images/about1.png" alt="" />
+                                <div class="about__swiper-slide-title">
+                                    <p class="about__swiper-slide-name">
+                                        Любовь Третьякова
+                                    </p>
+                                    <p class="about__swiper-slide-position">
+                                        Директор по развитию
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about__swiper-slide swiper-slide">
+                            <div class="about__swiper-slide-imgbox">
+                                <img class="about__swiper-slide-img" src="assets/images/about1.png" alt="" />
+                                <div class="about__swiper-slide-title">
+                                    <p class="about__swiper-slide-name">
+                                        Любовь Третьякова
+                                    </p>
+                                    <p class="about__swiper-slide-position">
+                                        Директор по развитию
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about__swiper-slide swiper-slide">
+                            <div class="about__swiper-slide-imgbox">
+                                <img class="about__swiper-slide-img" src="assets/images/about1.png" alt="" />
+                                <div class="about__swiper-slide-title">
+                                    <p class="about__swiper-slide-name">
+                                        Любовь Третьякова
+                                    </p>
+                                    <p class="about__swiper-slide-position">
+                                        Директор по развитию
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about__swiper-slide swiper-slide">
+                            <div class="about__swiper-slide-imgbox">
+                                <img class="about__swiper-slide-img" src="assets/images/about1.png" alt="" />
+                                <div class="about__swiper-slide-title">
+                                    <p class="about__swiper-slide-name">
+                                        Любовь Третьякова
+                                    </p>
+                                    <p class="about__swiper-slide-position">
+                                        Директор по развитию
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__swiper-btn-prev swiper-button-prev">
+                    <div class="about__swiper-svg-box">
+                        <svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.4911 21.723L3.41168 11.7456L14.4911 1.76813C14.6894 1.58987 14.8005 1.35056 14.8005 1.10137C14.8005 0.852182 14.6894 0.612877 14.4911 0.434613C14.3947 0.348298 14.2797 0.279726 14.1528 0.232913C14.0259 0.1861 13.8896 0.161987 13.752 0.161987C13.6143 0.161987 13.4781 0.1861 13.3511 0.232913C13.2242 0.279726 13.1092 0.348298 13.0129 0.434613L1.22401 11.0489C1.01703 11.2353 0.901196 11.4853 0.901196 11.7456C0.901196 12.0059 1.01703 12.2559 1.22401 12.4423L13.0106 23.0566C13.107 23.1435 13.2223 23.2126 13.3496 23.2597C13.477 23.3069 13.6138 23.3312 13.752 23.3312C13.8902 23.3312 14.027 23.3069 14.1543 23.2597C14.2817 23.2126 14.3969 23.1435 14.4933 23.0566C14.6917 22.8783 14.8027 22.639 14.8027 22.3898C14.8027 22.1406 14.6917 21.9013 14.4933 21.723H14.4911Z"
+                                fill="white"
+                            />
+                        </svg>
+                    </div>
+                </div>
+                <div class="about__swiper-btn-next swiper-button-next">
+                    <div class="about__swiper-svg-box">
+                        <svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.508937 1.77013L11.5883 11.7476L0.508937 21.725C0.310585 21.9033 0.19954 22.1426 0.19954 22.3918C0.19954 22.641 0.310585 22.8803 0.508937 23.0586C0.605277 23.1449 0.720268 23.2134 0.847176 23.2603C0.974085 23.3071 1.11036 23.3312 1.24802 23.3312C1.38567 23.3312 1.52195 23.3071 1.64886 23.2603C1.77576 23.2134 1.89076 23.1449 1.9871 23.0586L13.776 12.4443C13.983 12.2579 14.0988 12.0079 14.0988 11.7476C14.0988 11.4873 13.983 11.2373 13.776 11.0509L1.98937 0.436613C1.89296 0.349688 1.77768 0.280598 1.65036 0.233423C1.52303 0.186247 1.38622 0.161943 1.24802 0.161943C1.10981 0.161943 0.973006 0.186247 0.845677 0.233423C0.718347 0.280598 0.603074 0.349688 0.506662 0.436613C0.30831 0.614876 0.197266 0.854183 0.197266 1.10337C0.197266 1.35256 0.30831 1.59187 0.506662 1.77013H0.508937Z"
+                                fill="white"
+                            />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            
+        <div class="delimiter"></div>
+
+
+            <section class="footer" id="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__title-box">
+                <h2 class="footer__title title">контакТы</h2>
+            </div>
+            <div class="footer__content-box">
+                <form data-popup-message="#popup__success" data-dev action="#" class="footer__content-form">
+                    <p class="footer__content-text">
+                        Отправьте нам свой готовый проект и мы снизим его стоимость за счет инженерных решений. Оставьте контактные данные для связи с нашим менеджером.
+                    </p>
+                    <div class="footer__content-input-box">
+                        <div class="footer__content-input" action="">
+                            <div class="footer__content-input-name input-group ">
+                                <div class="popup__application-form-input-wrapper">
+                                    <input
+                                        class="popup__input popup__input-black input--name"
+                                        type="text"
+                                        placeholder="Имя"
+                                        data-validate
+                                        data-required
+                                        autocomplete="off"
+                                        name="form[]"
+                                    />
+                                </div>
+                                <span class="error-span">Введите текстовое значение</span>
+                            </div>
+                            <div class="footer__content-input-tel input-group">
+                                <div class="popup__application-form-input-wrapper">
+                                    <input
+                                        class="popup__input input--tel popup__input-black phone-mask"
+                                        type="text"
+                                        placeholder="Телефон"
+                                        data-validate
+                                        data-required="tel"
+                                        autocomplete="off"
+                                        name="form[]"
+                                    />
+                                </div>
+                                <span class="error-span">Введите текстовое значение</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="footer__content-btn button-white" type="submit">Оставить заявку</button>
+                </form>
+
+                <div class="footer__content-contacts">
+                    <div class="footer__content-locate-box">
+                        <p class="footer__content-locate">г. Вологда, ул. пр. Победы д.20, 2 этаж</p>
+                    </div>
+                    <div class="footer__content-provider-box">
+                        <p class="footer__content-text footer__content-contact-text">Для поставщиков:</p>
+                        <a class="footer__content-tel" href="tel:+78172502750">8 (8172) 50-27-50</a>
+                        <a class="footer__content-mail" href="mailto:rno@vestroy.ru">rno@vestroy.ru</a>
+                    </div>
+                    <div class="footer__content-sales-box">
+                        <p class="footer__content-text footer__content-contact-text">Отдел продаж:</p>
+                        <a class="footer__content-tel" href="+78002010435">8 (800) 201-04-35</a>
+                        <a class="footer__content-mail" href="vent35@yandex.ru">vent35@yandex.ru</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright-box">
+                <p class="footer__copyright">2022 ООО “Вестрой”</p>
+                <a class="footer__private-policy">Политика конфиденциальности </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </main>
+    </body>
+</html>
