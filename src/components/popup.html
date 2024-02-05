@@ -1,0 +1,232 @@
+<!---------------------CALCULATOR--------------------->
+
+<div id="popup__calculator" aria-hidden="true" class="popup">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <div class="popup__body popup__body--calculator">
+                <button data-close type="button" class="popup__body-close-btn close-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M18 2L2 18" stroke="#888888" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                        <path d="M2 2L18 18" stroke="#888888" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+                <form data-popup-message="#popup__success" data-dev action="#" class="popup__calculator-form-box">
+                    <p class="popup__title popup__title--center">Калькулятор стоимости общеобменной вентиляции</p>
+                    <div class="popup__calculator-box">
+                        <div class="popup__calculator-input-box">
+                            <div class="popup__calculator-input">
+                                <div class="form__dropdown form__dropdown_search">
+                                    <div class="form__dropdown_top">
+                                        <label class="popup__calculator-label input-group">
+                                            <span class="popup__calculator-label-text subscription">Тип вентиляции </span>
+                                            <span class="popup__calculator-form-input-wrapper">
+                                                <input
+                                                    class="popup__calculator-form-input input-dropdown"
+                                                    type="text"
+                                                    placeholder="Выберите тип"
+                                                    data-validate
+                                                    data-required
+                                                    autocomplete="off"
+                                                    name="form[]"
+                                                />
+                                                <div class="form__input-svg-box">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" fill="none">
+                                                        <path
+                                                            d="M6 9.5L12 15.5L18 9.5"
+                                                            stroke="#0E1C15"
+                                                            stroke-width="1.5"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                        />
+                                                    </svg>
+                                                </div>
+                                            </span>
+                                            <span class="error-span subscription">Введите числовое значение</span>
+                                        </label>
+                                    </div>
+                                    <div class="form__dropdown_bottom">
+                                        <div class="form__dropdown_list">
+                                            <label class="form__dropdown_item">
+                                                <div class="form__dropdown_item_checkbox radio-wrapper">
+                                                    <input type="radio" name="locality" />
+                                                </div>
+                                                <div class="form__dropdown_item_name text">Вытяжная</div>
+                                            </label>
+                                            <label class="form__dropdown_item">
+                                                <div class="form__dropdown_item_checkbox radio-wrapper">
+                                                    <input type="radio" name="locality" />
+                                                </div>
+                                                <div class="form__dropdown_item_name text">Приточная без подогрева</div>
+                                            </label>
+                                            <label class="form__dropdown_item">
+                                                <div class="form__dropdown_item_checkbox radio-wrapper">
+                                                    <input type="radio" name="locality" />
+                                                </div>
+                                                <div class="form__dropdown_item_name text">Приточно-вытяжная с подогревом</div>
+                                            </label>
+                                            <label class="form__dropdown_item">
+                                                <div class="form__dropdown_item_checkbox radio-wrapper">
+                                                    <input type="radio" name="locality" />
+                                                </div>
+                                                <div class="form__dropdown_item_name text">Приточно-вытяжная с рекуперацией</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__dropdown form__dropdown_search">
+                                    <div class="form__dropdown_top">
+                                        <label class="popup__calculator-label input-group">
+                                            <span class="popup__calculator-label-text subscription">Этаж помещения</span>
+                                            <span class="popup__calculator-form-input-wrapper">
+                                                <input
+                                                    class="popup__calculator-form-input input--num"
+                                                    type="text"
+                                                    placeholder="Выберите этаж"
+                                                    data-validate
+                                                    data-required
+                                                    autocomplete="off"
+                                                    name="form[]"
+                                                />
+                                            </span>
+                                            <span class="error-span subscription">Введите числовое значение</span>
+                                        </label>
+                                    </div>
+                                    <div class="form__dropdown_bottom">
+                                        <div class="form__dropdown_list">
+                                            <label class="form__dropdown_item">
+                                                <div class="form__dropdown_item_checkbox radio-wrapper">
+                                                    <input type="radio" name="floor" />
+                                                </div>
+                                                <div class="form__dropdown_item_name text">Цокольный</div>
+                                            </label>
+                                            <label class="form__dropdown_item">
+                                                <div class="form__dropdown_item_checkbox radio-wrapper">
+                                                    <input type="radio" name="floor" />
+                                                </div>
+                                                <div class="form__dropdown_item_name text">1</div>
+                                            </label>
+                                            <label class="form__dropdown_item">
+                                                <div class="form__dropdown_item_checkbox radio-wrapper">
+                                                    <input type="radio" name="floor" />
+                                                </div>
+                                                <div class="form__dropdown_item_name text">2</div>
+                                            </label>
+                                            <label class="form__dropdown_item">
+                                                <div class="form__dropdown_item_checkbox radio-wrapper">
+                                                    <input type="radio" name="floor" />
+                                                </div>
+                                                <div class="form__dropdown_item_name text">3</div>
+                                            </label>
+                                            <label class="form__dropdown_item">
+                                                <div class="form__dropdown_item_checkbox radio-wrapper">
+                                                    <input type="radio" name="floor" />
+                                                </div>
+                                                <div class="form__dropdown_item_name text">4</div>
+                                            </label>
+                                            <label class="form__dropdown_item">
+                                                <div class="form__dropdown_item_checkbox radio-wrapper">
+                                                    <input type="radio" name="floor" />
+                                                </div>
+                                                <div class="form__dropdown_item_name text">4 и выше</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label class="popup__calculator-label input-group">
+                                    <span class="popup__calculator-label-text subscription">Площадь помещения, м2 </span>
+                                    <span class="popup__calculator-form-input-wrapper">
+                                        <input
+                                            class="popup__calculator-form-input input--num"
+                                            type="text"
+                                            placeholder="Укажите площадь от 10 до 1000 м2"
+                                            data-validate
+                                            data-required
+                                            autocomplete="off"
+                                            name="form[]"
+                                        />
+                                    </span>
+                                    <span class="error-span subscription">Введите числовое значение</span>
+                                </label>
+                                <label class="popup__calculator-label input-group">
+                                    <span class="popup__calculator-label-text subscription">Высота помещения, м</span>
+                                    <span class="popup__calculator-form-input-wrapper">
+                                        <input
+                                            class="popup__calculator-form-input input--num"
+                                            type="text"
+                                            placeholder="Укажите высоту от 2 до 4 м"
+                                            data-validate
+                                            data-required
+                                            autocomplete="off"
+                                            name="form[]"
+                                        />
+                                    </span>
+                                    <span class="error-span subscription">Введите числовое значение</span>
+                                </label>
+                            </div>
+                            <div class="popup__calculator-btn-wrapper">
+                                <div class="popup__calculator-btn-box">
+                                    <button class="popup__calculator-btn button-yellow">Посчитать</button>
+                                    <button class="popup__calculator-btn button-white">Консультация</button>
+                                </div>
+                                <p class="popup__calculator-btn-text">Итоговая стоимость:</p>
+                            </div>
+
+                            <p class="popup__calculator-btn-disclamer">
+                                *Если площадь помещения и высота больше, обратитесь за индивидуальной консультацией к специалисту
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------------------SUCCESS----------------------->
+
+<div id="popup__success" aria-hidden="true" class="popup">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <div class="popup__body">
+                <button data-close type="button" class="popup__body-close-btn close-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M18 2L2 18" stroke="#888888" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                        <path d="M2 2L18 18" stroke="#888888" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <form data-popup-message="#popup__success" data-dev action="#" class="popup__calculator-form-box">
+                    <p class="popup__title popup__title--center">Получить<br />консультацию</p>
+                    <p class="popup__text">Оставьте заявку, чтобы наш инженер мог с Вами<br />связаться</p>
+
+                    <div class="footer__content-input" action="">
+                        <div class="popup__input-name input-group">
+                            <div class="popup__application-form-input-wrapper">
+                                <input class="popup__input input--name" type="text" placeholder="Имя" data-validate data-required autocomplete="off" name="form[]" />
+                            </div>
+                            <span class="error-span">Введите текстовое значение</span>
+                        </div>
+                        <div class="popup__input-tel input-group">
+                            <div class="popup__application-form-input-wrapper">
+                                <input
+                                    class="popup__input input--tel phone-mask"
+                                    type="text"
+                                    placeholder="Телефон"
+                                    data-validate
+                                    data-required="tel"
+                                    autocomplete="off"
+                                    name="form[]"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <button class="popup__btn button-yellow" type="submit">Отплавить</button>
+                </form>
+                <p class="popup__convention">
+                    Нажимая на кнопку, Вы даете согласие на обработку<br />
+                    персональных данных
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

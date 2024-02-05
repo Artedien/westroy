@@ -1,0 +1,189 @@
+//colors
+$white: #ffffff;
+$yellow: #fdb505;
+$black: #252424;
+$gray: #c4c4c4;
+$light-gray: #e5e5e5;
+$dark-gray: #494949;
+
+// * {
+//     outline:1px solid #E33C18;
+// }
+
+body {
+    color: $white;
+    font-family: Oswald;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: $black;
+    @media (max-width: 400px) {
+        padding-right: 0 !important;
+    }
+
+    .lock & {
+        overflow: hidden;
+        touch-action: none;
+    }
+
+
+}
+
+main {
+    flex-grow: 1;
+    position: relative;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    @media (max-width: 48em) {
+        width: 100%;
+    }
+}
+
+.delimiter {
+    // display: none;
+    margin: 5rem auto;
+    max-width: 192rem;
+    width: 100%;
+    height: 12rem;
+    background: $gray;
+    @media (max-width: 1000px) {
+        height: 7.6rem;
+    }
+    @media (max-width: 400px) {
+        height: 4.5rem;
+        margin: 3.5rem auto;
+    }
+}
+.title {
+    padding-top: 9rem;
+    font-size: 6.4rem;
+    text-transform: uppercase;
+    @media (max-width: 1000px) {
+        font-size: 4rem;
+        padding-top: 4.6rem;
+    }
+    @media (max-width: 400px) {
+        font-size: 2.7rem;
+    }
+}
+
+// ---------------------------------text-----------------------------------------
+
+.yellow-text {
+    color: $yellow;
+}
+
+// ---------------------------------buttons-----------------------------------------
+
+.button {
+    padding: 1.5rem 3.2rem;
+    border-radius: 2rem;
+    color: $white;
+    transition: background-color 0.3s;
+    width: fit-content;
+    &:hover {
+    }
+}
+
+.button-yellow {
+    color: $white;
+    text-align: center;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 122.188%; /* 19.55px */
+    letter-spacing: 1.28px;
+    border-radius: 30.116px;
+    background: #fdb505;
+    transition: box-shadow 0.3s;
+    &:hover {
+        box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
+    }
+    padding: 1.2rem 2.5rem 1.5rem;
+    @media (max-width: 1000px) {
+        font-size: 1.2rem;
+        padding: 0.6rem 1.25rem 0.75rem;
+    }
+}
+
+.button-white {
+    color: #fdb505;
+    text-align: center;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 122.188%; /* 19.55px */
+    letter-spacing: 1.28px;
+    border-radius: 30.116px;
+    background: #fff;
+    transition: box-shadow 0.3s;
+    &:hover {
+        box-shadow: 0px 0px 10px 0px #fdb505;
+    }
+    padding: 1.2rem 2.5rem 1.5rem;
+    @media (max-width: 1000px) {
+        font-size: 1.2rem;
+        padding: 0.6rem 1.25rem 0.75rem;
+    }
+}
+.input-group {
+    position: relative;
+
+}
+.input-group input,
+.input-group textarea {
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+
+}
+
+._form-error {
+    background-color:$black;
+    border-radius: 3rem;
+}
+._form-error  input {
+
+    color: $yellow;
+    &::placeholder {
+        color: $gray;
+    }
+}
+
+
+
+.error-span {
+    position: absolute;
+    bottom: -2.5rem;
+    left: 0;
+    font-size: 1.7rem;
+    color: #f35656;
+    line-height: normal;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        line-height: normal;
+    }
+
+    @media (max-width: 48em) {
+        bottom: -3rem;
+        font-size: 2rem;
+    }
+}
